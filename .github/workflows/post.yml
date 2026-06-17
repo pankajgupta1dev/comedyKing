@@ -55,7 +55,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           
           # Force pull taaki koi desync na ho
-          git pull origin main --rebase
+          git pull origin main --rebase --autostash
           
           git add db.json
           git diff --cached --quiet || (git commit -m "Update progress" && git push)
