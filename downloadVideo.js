@@ -4,7 +4,7 @@ const { exec } = require("child_process");
 
 const dbPath = path.join(__dirname, "db.json");
 
-// const ytDlp = path.join(__dirname, "bin", "yt-dlp.exe");
+// ✅ Variable ka naam yahan lowercase hai
 const ytdlp =
   process.platform === "win32"
     ? path.join(__dirname, "bin", "yt-dlp.exe")
@@ -38,7 +38,8 @@ async function downloadVideo() {
 
     const outputTemplate = path.join(downloadFolder, "video.%(ext)s");
 
-    const command = `"${ytDlp}" -o "${outputTemplate}" "${db.current_video_url}"`;
+    // ✅ Yahan maine ytDlp ko badal kar ytdlp kar diya hai
+    const command = `"${ytdlp}" -o "${outputTemplate}" "${db.current_video_url}"`;
 
     return new Promise((resolve, reject) => {
 
