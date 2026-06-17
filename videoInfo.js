@@ -63,7 +63,11 @@ const path = require("path");
 const { exec } = require("child_process");
 
 const dbPath = path.join(__dirname, "db.json");
-const ffprobe = path.join(__dirname, "bin", "ffprobe.exe");
+// const ffprobe = path.join(__dirname, "bin", "ffprobe.exe");
+const ffprobe =
+  process.platform === "win32"
+    ? path.join(__dirname, "bin", "ffprobe.exe")
+    : "ffprobe";
 
 async function getVideoInfo() {
     const db = await fs.readJson(dbPath);
@@ -78,6 +82,7 @@ async function getVideoInfo() {
         throw new Error("Downloaded video does not exist.");
     }
 
+    // const command = `"${ffprobe}" -v quiet -print_format json -show_format -show_streams "${videoPath}"`;
     const command = `"${ffprobe}" -v quiet -print_format json -show_format -show_streams "${videoPath}"`;
 
     return new Promise((resolve, reject) => {

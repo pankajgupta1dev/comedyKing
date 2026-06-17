@@ -3,8 +3,11 @@ const path = require("path");
 const { exec } = require("child_process");
 
 const dbPath = path.join(__dirname, "db.json");
-const ffmpeg = path.join(__dirname, "bin", "ffmpeg.exe");
-
+// const ffmpeg = path.join(__dirname, "bin", "ffmpeg.exe");
+const ffmpeg =
+  process.platform === "win32"
+    ? path.join(__dirname, "bin", "ffmpeg.exe")
+    : "ffmpeg";
 const outputFolder = path.join(__dirname, "output");
 
 async function cutVideo() {
