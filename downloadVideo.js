@@ -4,7 +4,11 @@ const { exec } = require("child_process");
 
 const dbPath = path.join(__dirname, "db.json");
 
-const ytDlp = path.join(__dirname, "bin", "yt-dlp.exe");
+// const ytDlp = path.join(__dirname, "bin", "yt-dlp.exe");
+const ytdlp =
+  process.platform === "win32"
+    ? path.join(__dirname, "bin", "yt-dlp.exe")
+    : "yt-dlp";
 const downloadFolder = path.join(__dirname, "downloads");
 
 async function downloadVideo() {
