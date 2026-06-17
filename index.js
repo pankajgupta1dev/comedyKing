@@ -16,7 +16,7 @@ async function start() {
 
         if (clip) {
 
-            // await uploadYoutube(clip);
+             await uploadYoutube(clip);
             await uploadFacebook(clip);
  // Upload successful -> delete clip
     await deleteFile(clip);
