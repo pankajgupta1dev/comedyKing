@@ -1,0 +1,64 @@
+name: AI Facts Auto Post
+
+permissions:
+  contents: write
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/15 * * * *'
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install FFmpeg and Fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg fonts-dejavu-core fonts-freefont-ttf python3 python3-pip
+
+      - name: Install yt-dlp
+        run: |
+          python3 -m pip install --upgrade pip
+          pip3 install -U yt-dlp
+
+      - name: Verify FFmpeg
+        run: |
+          which ffmpeg
+          ffmpeg -version
+
+      - name: Verify yt-dlp
+        run: |
+          which yt-dlp
+          yt-dlp --version
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Create YouTube Credential Files
+        run: |
+          echo '${{ secrets.YT_CLIENT_SECRET }}' > client_secret.json
+          echo '${{ secrets.YT_TOKEN }}' > token.json
+
+      - name: Run Automation
+        run: node index.js
+
+      - name: Commit Progress
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add db.json
+
+          git diff --cached --quiet || git commit -m "Update progress"
+
+          git push
