@@ -1,13 +1,13 @@
 {
-  "current_video_url": "https://www.youtube.com/watch?v=AnsR2f64pIw",
-  "last_video_url": "https://www.youtube.com/watch?v=AnsR2f64pIw",
+  "current_video_url": "",
+  "last_video_url": "",
   "downloaded_video": "video.webm",
-  "last_processed_seconds": 90,
+  "last_processed_seconds": 30,
   "clip_duration": 30,
   "total_duration": 283,
-  "video_width": 3840,
-  "video_height": 2160,
-  "is_completed": false,
+  "video_width": 640,
+  "video_height": 360,
+  "is_completed": true,
   "video_fps": 23.976023976023978,
   "has_audio": true
 }
