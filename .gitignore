@@ -19,10 +19,10 @@ token.json
 # config.json
 
 # Downloaded Videos
-downloads/
+# downloads/
 
 # Output Clips
-output/
+# output/
 
 # Temporary Files
 temp/
