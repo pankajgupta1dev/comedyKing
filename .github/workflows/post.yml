@@ -1,0 +1,64 @@
+name: AI Facts
+
+permissions:
+  contents: write # Yeh sahi hai, database write karne ke liye zaroori hai
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/15 * * * *' # Har 15 minute mein automatically script chalegi
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true # Git push authorization ke liye zaroori hai
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install FFmpeg and Tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg fonts-dejavu-core fonts-freefont-ttf python3 python3-pip
+
+      - name: Install yt-dlp
+        run: |
+          python3 -m pip install --upgrade pip
+          pip3 install -U yt-dlp
+
+      - name: Verify Tools
+        run: |
+          ffmpeg -version
+          yt-dlp --version
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Create YouTube Credential Files
+        run: |
+          echo '${{ secrets.YT_CLIENT_SECRET }}' > client_secret.json
+          echo '${{ secrets.YT_TOKEN }}' > token.json
+
+      - name: Run Automation
+        run: node index.js
+
+      - name: Commit Progress
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add db.json
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Update progress"
+            git push origin main
+          fi

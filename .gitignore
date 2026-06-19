@@ -1,0 +1,50 @@
+# Node Modules
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment
+.env
+.env.*
+
+# YouTube Credentials
+client_secret.json
+token.json
+
+# Facebook Config (agar tokens isme hain)
+# config.json
+
+# Downloaded Videos
+downloads/
+
+# Output Clips
+output/
+
+# Temporary Files
+temp/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# JetBrains
+.idea/
+
+# Coverage
+coverage/
+
+# Build
+dist/
+
+# Optional
+*.zip
+*.mp4
+*.mov
+*.avi

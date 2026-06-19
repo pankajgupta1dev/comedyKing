@@ -1,0 +1,10 @@
+[
+  {
+    "name": "",
+    "value": "",
+    "expirationDate": 1781843224.636,
+    "session": false,
+    "replace": false,
+    "origin": "https://www.youtube.com"
+  }
+]
