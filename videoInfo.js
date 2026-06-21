@@ -132,11 +132,20 @@ async function getVideoInfo() {
           hasAudio: !!audioStream,
         };
 
+        // db.total_duration = result.duration;
+        // db.video_width = result.width;
+        // db.video_height = result.height;
+        // db.video_fps = result.fps;
+        // db.has_audio = result.hasAudio;
         db.total_duration = result.duration;
         db.video_width = result.width;
         db.video_height = result.height;
         db.video_fps = result.fps;
         db.has_audio = result.hasAudio;
+
+        // New video ke liye reset
+        db.last_processed_seconds = 0;
+        db.is_completed = false;
 
         await fs.writeJson(dbPath, db, {
           spaces: 2,
