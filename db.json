@@ -2,12 +2,12 @@
   "current_video_url": "",
   "last_video_url": "",
   "downloaded_video": "video.webm",
-  "last_processed_seconds": 540,
+  "last_processed_seconds": 548,
   "clip_duration": 30,
   "total_duration": 548,
   "video_width": 1280,
   "video_height": 720,
-  "is_completed": false,
+  "is_completed": true,
   "video_fps": 25,
   "has_audio": true
 }
