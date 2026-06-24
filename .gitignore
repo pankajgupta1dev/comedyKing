@@ -45,6 +45,6 @@ dist/
 
 # Optional
 *.zip
-*.mp4
+# *.mp4
 *.mov
 *.avi
