@@ -1,13 +1,13 @@
 {
   "current_video_url": "",
   "last_video_url": "",
-  "downloaded_video": "video.webm",
-  "last_processed_seconds": 548,
+  "downloaded_video": "video.mp4",
+  "last_processed_seconds": 30,
   "clip_duration": 30,
-  "total_duration": 60,
+  "total_duration": 322,
   "video_width": 1920,
   "video_height": 1080,
-  "is_completed": true,
-  "video_fps": 29.97002997002997,
+  "is_completed": false,
+  "video_fps": 25,
   "has_audio": true
 }
