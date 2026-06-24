@@ -4,10 +4,10 @@
   "downloaded_video": "video.webm",
   "last_processed_seconds": 548,
   "clip_duration": 30,
-  "total_duration": 548,
-  "video_width": 1280,
-  "video_height": 720,
+  "total_duration": 60,
+  "video_width": 1920,
+  "video_height": 1080,
   "is_completed": true,
-  "video_fps": 25,
+  "video_fps": 29.97002997002997,
   "has_audio": true
 }
