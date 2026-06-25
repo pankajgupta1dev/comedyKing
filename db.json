@@ -2,12 +2,12 @@
   "current_video_url": "",
   "last_video_url": "",
   "downloaded_video": "video.mp4",
-  "last_processed_seconds": 300,
+  "last_processed_seconds": 322,
   "clip_duration": 30,
   "total_duration": 322,
   "video_width": 1920,
   "video_height": 1080,
-  "is_completed": false,
+  "is_completed": true,
   "video_fps": 25,
   "has_audio": true
 }
