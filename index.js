@@ -33,6 +33,8 @@ async function start() {
 
     // ---------------- FACEBOOK IMAGE SCHEDULER ----------------
 
+    let extractedImage = null;
+
     try {
       const dbPath = path.join(__dirname, "db.json");
 
@@ -44,25 +46,34 @@ async function start() {
 
       const currentPart = Math.floor(db.last_processed_seconds / db.clip_duration);
 
-      console.log(`📸 Extracting thumbnail for Part ${currentPart}...`);
+      // 50% chance image schedule hogi
+      const shouldScheduleImage = Math.random() < 0.5;
 
-      const extractedImage = await extractFrame(clip, currentPart);
-
-      console.log("🖼️ Thumbnail:", extractedImage);
-
-      if (extractedImage && (await fs.pathExists(extractedImage))) {
-        const caption = `Part ${currentPart} of our viral series! 🔥 Full video link in comments. #shorts #viral`;
-
-        const postId = await scheduleFacebookPost(extractedImage, caption);
-
-        if (postId) {
-          // console.log("✅ Facebook Image Scheduled Successfully.");
-          console.log("🆔 Post ID:", postId);
-        } else {
-          console.log("⚠️ Facebook scheduling failed.");
-        }
+      if (!shouldScheduleImage) {
+        console.log("⏭️ Random decision: Image skipped for this run.");
       } else {
-        console.log("⚠️ Thumbnail generate nahi hui.");
+        console.log(`📸 Extracting thumbnail for Part ${currentPart}...`);
+
+        extractedImage = await extractFrame(clip, currentPart);
+
+        console.log("🖼️ Thumbnail:", extractedImage);
+
+        if (extractedImage && (await fs.pathExists(extractedImage))) {
+          const caption = `Part ${currentPart} of our viral series! 🔥 Full video link in comments. #shorts #viral`;
+
+          const postId = await scheduleFacebookPost(extractedImage, caption);
+
+          if (postId) {
+            console.log("🆔 Post ID:", postId);
+
+            deleteFile(extractedImage);
+            console.log("🗑️ Thumbnail deleted.");
+          } else {
+            console.log("⚠️ Facebook scheduling failed.");
+          }
+        } else {
+          console.log("⚠️ Thumbnail generate nahi hui.");
+        }
       }
     } catch (schedError) {
       console.error("⚠️ Facebook Scheduler Error:", schedError.message);
