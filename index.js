@@ -83,7 +83,7 @@ async function start() {
 
     console.log("\n🚀 Starting Video Uploads...");
 
-    await uploadYoutube(clip);
+    // await uploadYoutube(clip);
 
     await uploadFacebook(clip);
 
