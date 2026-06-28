@@ -1,12 +1,12 @@
 {
-    "facebook": {
-        "pageId": "1147684545097400",
-        "accessToken": "EAAOEEmh7OrMBR9wyk4obv72j3tiQFz5Y4lfRSNSEadTOzZBYpyvKIJnUxF4zZBpOxrHGIIjT0MoUzrlCsFj6mTGPVI0BTOlHZB0f1hPaYhOXGNwTSIv6tut1tgPZAvBwEfM93IxmCPp2LSiQH2iIbxp9ivVCFQbamkOAZCXq8unJgizZAaF3oKYuipsLE7AWuXIVbH"
-    },
-    "instagram": {
-        "businessId": "17841418050745015"
-    },
-      "cloudinary": {
+  "facebook": {
+    "pageId": "1200503629808457",
+    "accessToken": "EAAOEEmh7OrMBR9wyk4obv72j3tiQFz5Y4lfRSNSEadTOzZBYpyvKIJnUxF4zZBpOxrHGIIjT0MoUzrlCsFj6mTGPVI0BTOlHZB0f1hPaYhOXGNwTSIv6tut1tgPZAvBwEfM93IxmCPp2LSiQH2iIbxp9ivVCFQbamkOAZCXq8unJgizZAaF3oKYuipsLE7AWuXIVbH"
+  },
+  "instagram": {
+    "businessId": "17841479604997127"
+  },
+  "cloudinary": {
     "cloudName": "dlu98rmxh",
     "apiKey": "169538582439248",
     "apiSecret": "eeV7ahtxK-5EbQlIxUWn8odF4zQ"
