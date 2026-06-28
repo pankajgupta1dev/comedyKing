@@ -85,7 +85,7 @@ async function start() {
 
     // await uploadYoutube(clip);
 
-    await uploadFacebook(clip);
+    // await uploadFacebook(clip);
 
     const publicUrl = await uploadCloudinary(clip);
 
@@ -96,7 +96,7 @@ async function start() {
     console.log("☁️ Cloudinary URL:");
     console.log(publicUrl);
 
-    await uploadInstagram(publicUrl);
+    // await uploadInstagram(publicUrl);
 
     deleteFile(extractedImage);
     deleteFile(clip);
