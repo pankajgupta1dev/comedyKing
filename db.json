@@ -2,12 +2,12 @@
   "current_video_url": "",
   "last_video_url": "",
   "downloaded_video": "INDIA’S GOT LATENT S2 EP1 ft. Alia Bhatt, Sharvari, Ashish Solanki.mp4",
-  "last_processed_seconds": 480,
+  "last_processed_seconds": 507,
   "clip_duration": 30,
   "total_duration": 507,
   "video_width": 1920,
   "video_height": 1080,
-  "is_completed": false,
+  "is_completed": true,
   "video_fps": 25,
   "has_audio": true
 }
