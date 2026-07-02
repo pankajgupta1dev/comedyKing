@@ -1,13 +1,13 @@
 {
   "current_video_url": "",
   "last_video_url": "",
-  "downloaded_video": "Trump v3.0 _ The Most Viral Content Creator _ StandUp Comedy by Rahul Dua _ 2026.mp4",
-  "last_processed_seconds": 576,
+  "downloaded_video": "Respect Ka Nasha _ Standup Comedy by Manish Chaubey.mp4",
+  "last_processed_seconds": 30,
   "clip_duration": 30,
-  "total_duration": 576,
-  "video_width": 2560,
-  "video_height": 1440,
-  "is_completed": true,
+  "total_duration": 600,
+  "video_width": 1920,
+  "video_height": 1080,
+  "is_completed": false,
   "video_fps": 25,
   "has_audio": true
 }
