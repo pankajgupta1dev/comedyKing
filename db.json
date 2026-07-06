@@ -1,13 +1,13 @@
 {
   "current_video_url": "",
   "last_video_url": "",
-  "downloaded_video": "INDIA’S GOT LATENT S2 EP2 ft. Harssh Limbachiya, Kiku Sharda, Chandan Prabhakar.mp4",
-  "last_processed_seconds": 605,
+  "downloaded_video": "25.mp4",
+  "last_processed_seconds": 90,
   "clip_duration": 30,
-  "total_duration": 605,
+  "total_duration": 760,
   "video_width": 1920,
   "video_height": 1080,
-  "is_completed": true,
+  "is_completed": false,
   "video_fps": 25,
   "has_audio": true
 }
