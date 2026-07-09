@@ -1,13 +1,13 @@
 {
   "current_video_url": "",
   "last_video_url": "",
-  "downloaded_video": "25.mp4",
-  "last_processed_seconds": 760,
+  "downloaded_video": "sdsdfsf.mp4",
+  "last_processed_seconds": 30,
   "clip_duration": 30,
-  "total_duration": 760,
+  "total_duration": 660,
   "video_width": 1920,
   "video_height": 1080,
-  "is_completed": true,
-  "video_fps": 25,
+  "is_completed": false,
+  "video_fps": 30,
   "has_audio": true
 }
