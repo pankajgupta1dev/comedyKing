@@ -2,12 +2,12 @@
   "current_video_url": "",
   "last_video_url": "",
   "downloaded_video": "dfvsdvd.mp4",
-  "last_processed_seconds": 660,
+  "last_processed_seconds": 666,
   "clip_duration": 30,
   "total_duration": 666,
   "video_width": 640,
   "video_height": 360,
-  "is_completed": false,
+  "is_completed": true,
   "video_fps": 25,
   "has_audio": true
 }
