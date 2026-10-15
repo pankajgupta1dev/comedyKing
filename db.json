@@ -1,13 +1,13 @@
 {
   "current_video_url": "",
   "last_video_url": "",
-  "downloaded_video": "sfdfsfsdfsdfsdf.mp4",
-  "last_processed_seconds": 771,
+  "downloaded_video": "pewew.mp4",
+  "last_processed_seconds": 30,
   "clip_duration": 30,
-  "total_duration": 771,
-  "video_width": 1920,
-  "video_height": 1080,
-  "is_completed": true,
-  "video_fps": 60,
+  "total_duration": 539,
+  "video_width": 854,
+  "video_height": 480,
+  "is_completed": false,
+  "video_fps": 29.97002997002997,
   "has_audio": true
 }
