@@ -87,16 +87,18 @@ async function start() {
 
     await uploadFacebook(clip);
 
-    const publicUrl = await uploadCloudinary(clip);
+    // await uploadInstagram(clip);
 
-    if (!publicUrl) {
-      throw new Error("Cloudinary upload failed.");
-    }
+    // const publicUrl = await uploadCloudinary(clip);
 
-    console.log("☁️ Cloudinary URL:");
-    console.log(publicUrl);
+    // if (!publicUrl) {
+    //   throw new Error("Cloudinary upload failed.");
+    // }
 
-    await uploadInstagram(publicUrl);
+    // console.log("☁️ Cloudinary URL:");
+    // console.log(publicUrl);
+
+    // await uploadInstagram(publicUrl);
 
     deleteFile(extractedImage);
     deleteFile(clip);
